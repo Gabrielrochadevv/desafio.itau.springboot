@@ -88,27 +88,27 @@ Classe `TransactionController`:
 ### Transação válida
 
     POST /transacao
-{
+    {
     "valor": 125.45,
     "dataHora": "2025-07-31T12:33:56.789-03:00"
-}
+    }
 - `201 Created`
   
   ### Transação inválida
 
-    POST /transacao
-    {
-    "valor": -80.45,
-    "dataHora": "2025-07-31T12:33:56.789-03:00"
-}
+      POST /transacao
+      {
+      "valor": -80.45,
+      "dataHora": "2025-07-31T12:33:56.789-03:00"
+      }
   - `422 Unprocessable Entity`
 
  ### JSON inválido
-  POST /transacao
-{
+    POST /transacao
+    {
     "valor": -80.45,
     "dataHora": "teste"
-}
+    }
   - `400 Bad Request`
   
 ---
